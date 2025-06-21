@@ -10,32 +10,68 @@
   <div class="cart-container">
     <h1>Your Shopping Cart</h1>
 
-    <div class="cart-item">
+    <div class="cart-item" data-price="499">
       <img src="book1.jpg" alt="Book cover">
       <div class="item-details">
         <h2>Book Title One</h2>
         <p>by Author A</p>
         <p>Price: ₹499</p>
-        <p>Quantity: 1</p>
+        Quantity: <input class="quantity" type="number" value="1" min="1">
       </div>
       <button class="remove-btn">Remove</button>
     </div>
 
-    <div class="cart-item">
+    <div class="cart-item" data-price="299">
       <img src="book2.jpg" alt="Book cover">
       <div class="item-details">
         <h2>Book Title Two</h2>
         <p>by Author B</p>
         <p>Price: ₹299</p>
-        <p>Quantity: 2</p>
+        Quantity: <input class="quantity" type="number" value="2" min="1">
       </div>
       <button class="remove-btn">Remove</button>
     </div>
 
     <div class="cart-total">
-      <h3>Total: ₹1,097</h3>
+      <h3>Total: ₹<span id="total">0</span></h3>
       <button class="checkout-btn">Proceed to Checkout</button>
     </div>
   </div>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      const updateTotal = () => {
+        const cartItems = document.querySelectorAll(".cart-item");
+        let total = 0;
+
+        cartItems.forEach(item => {
+          const price = parseFloat(item.dataset.price);
+          const quantity = parseInt(item.querySelector(".quantity").value);
+          total += price * quantity;
+        });
+
+        document.getElementById("total").textContent = total.toFixed(2);
+      };
+
+      // Quantity change event
+      document.querySelectorAll(".quantity").forEach(input => {
+        input.addEventListener("change", (e) => {
+          if (e.target.value < 1) e.target.value = 1;
+          updateTotal();
+        });
+      });
+
+      // Remove button event
+      document.querySelectorAll(".remove-btn").forEach(button => {
+        button.addEventListener("click", () => {
+          button.parentElement.remove();
+          updateTotal();
+        });
+      });
+
+      // Initial total
+      updateTotal();
+    });
+  </script>
 </body>
 </html>
