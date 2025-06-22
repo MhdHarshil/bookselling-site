@@ -28,7 +28,7 @@ const User = mongoose.model('User', userSchema);
 
 // Routes
 app.get('/', (req, res) => {
-  res.sendFile(path.join(__dirname,'..', 'front-end', 'login-page.html'));
+  res.sendFile(path.join(__dirname,'..', 'front-end','pages', 'login-page.html'));
 });
 
 app.post('/login', async (req, res) => {
