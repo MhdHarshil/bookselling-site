@@ -1,4 +1,4 @@
-# 📚 BookBazaar – E-Commerce Bookstore
+# 📚 E-Commerce Bookstore
 
 Welcome to **BookBazaar**, a collaborative e-commerce web app for selling books. This is our first team project aimed at learning frontend, backend, and collaboration using Git and GitHub.
 
@@ -39,21 +39,22 @@ Welcome to **BookBazaar**, a collaborative e-commerce web app for selling books.
 
 <details>
 <summary>📁 Click to view Folder Structure</summary>
-book-bazaar/
-├── front-end/
-│ ├── pages/
-│ ├── styles/
-│ ├── scripts/
-│ └── assets/
-├── back-end/
-│ ├── routes/
-│ ├── controllers/
-│ ├── models/
-│ └── config/
-├── .env
-├── .gitignore
-├── README.md
-└── package.json
+<br>
+  book-store/<br>
+  ├── front-end/<br>
+  │ ├── pages/<br>
+  │ ├── styles/<br>
+  │ ├── scripts/<br>
+  │ └── assets/<br>
+  ├── back-end/<br>
+  │ ├── routes/<br>
+  │ ├── controllers/<br>
+  │ ├── models/<br>
+  │ └── config/<br>
+  ├── .env<br>
+  ├── .gitignore<br>
+  ├── README.md<br>
+  └── package.json<br>
 </details>
 
 ---
