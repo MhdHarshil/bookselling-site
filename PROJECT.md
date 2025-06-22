@@ -4,7 +4,7 @@
 ## 📆 Day 1 – Setup & Layout
 
 ### 🧠 Harshil (Backend + Git)
-- [ ] Initialize `server.js` with Express
+- [X] Initialize `server.js` with Express
 - [ ] Connect MongoDB (use `.env`)
 - [ ] Create `/api/books` route with dummy JSON
 - [ ] Help team with Git setup (clone, branch, push, pull)
