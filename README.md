@@ -39,7 +39,6 @@ Welcome to **BookBazaar**, a collaborative e-commerce web app for selling books.
 
 <details>
 <summary>📁 Click to view Folder Structure</summary>
-
 book-bazaar/
 ├── front-end/
 │ ├── pages/
@@ -55,7 +54,6 @@ book-bazaar/
 ├── .gitignore
 ├── README.md
 └── package.json
-
 </details>
 
 ---
