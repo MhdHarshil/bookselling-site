@@ -1,62 +1,70 @@
-/* styles/login-page.css */
-
-body {
+/* Reset default styles */
+* {
   margin: 0;
   padding: 0;
-  font-family: Arial, sans-serif;
-  background: linear-gradient(135deg, #74ebd5, #acb6e5);
-  height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  box-sizing: border-box;
 }
 
-.login-form-container {
-  background-color: #ffffff;
-  padding: 40px 30px;
-  border-radius: 10px;
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
-  width: 300px;
+body {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  background: linear-gradient(135deg, #667eea, #764ba2);
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 form {
-  display: flex;
-  flex-direction: column;
+  background-color: white;
+  padding: 40px 30px;
+  border-radius: 15px;
+  width: 100%;
+  max-width: 400px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+}
+
+h1 {
+  text-align: center;
+  margin-bottom: 25px;
+  color: #333;
 }
 
 label {
-  margin-bottom: 5px;
-  font-weight: bold;
+  display: block;
+  margin-bottom: 8px;
+  font-weight: 600;
+  color: #333;
 }
 
 input[type="text"],
 input[type="password"] {
-  padding: 10px;
+  width: 100%;
+  padding: 12px;
   margin-bottom: 20px;
   border: 1px solid #ccc;
-  border-radius: 6px;
-  font-size: 14px;
+  border-radius: 8px;
+  transition: 0.3s;
 }
 
-button[type="submit"] {
-  padding: 10px;
-  background-color: #4CAF50;
+input[type="text"]:focus,
+input[type="password"]:focus {
+  border-color: #667eea;
+  outline: none;
+  box-shadow: 0 0 5px rgba(102, 126, 234, 0.5);
+}
+
+button {
+  width: 100%;
+  padding: 12px;
+  background-color: #667eea;
   color: white;
-  border: none;
-  border-radius: 6px;
   font-size: 16px;
+  border: none;
+  border-radius: 8px;
   cursor: pointer;
-  transition: background-color 0.3s;
+  transition: background 0.3s;
 }
 
-button[type="submit"]:hover {
-  background-color: #45a049;
-}
-
-p {
-  text-align: center;
-}
-
-a {
-  text-decoration: none;
+button:hover {
+  background-color: #556cd6;
 }
