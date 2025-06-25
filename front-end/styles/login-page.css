@@ -14,32 +14,30 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  
-  
-  
+  backdrop-filter: brightness(0.8) blur(5px);
 
 }
 
 form {
-  background-color: white;
+  background-color: rgba(181, 169, 169, 0.491);
   padding: 40px 30px;
   border-radius: 15px;
   width: 100%;
   max-width: 400px;
-  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 10px 25px rgba(143, 137, 137, 0.626);
 }
 
 h1 {
   text-align: center;
   margin-bottom: 25px;
-  color: #333;
+  color: #fff;
 }
 
 label {
   display: block;
   margin-bottom: 8px;
   font-weight: 600;
-  color: #333;
+  color: #fff;
 }
 
 input[type="text"],
@@ -47,7 +45,7 @@ input[type="password"] {
   width: 100%;
   padding: 12px;
   margin-bottom: 20px;
-  border: 1px solid #ccc;
+  border: 1px solid #cccccc7a;
   border-radius: 8px;
   transition: 0.3s;
 }
@@ -73,4 +71,15 @@ button {
 
 button:hover {
   background-color: #556cd6;
+}
+
+p {
+  text-align: center;
+  margin-top: 15px;
+  color: #fff;
+}
+
+a {
+  color: #667eea;
+  text-decoration: none;
 }
