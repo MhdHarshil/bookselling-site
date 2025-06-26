@@ -5,6 +5,40 @@ const path = require('path');
 require('dotenv').config();
 
 const app = express();
+// Set view engine
+app.set('view engine', 'ejs'); 
+// Set views directory
+app.set('views', path.join(__dirname, 'views'));
+
+// Set static files directory
+app.use(express.static(path.join(__dirname, 'public')));
+
+// Set up body parser to handle form submissions
+app.use(bodyParser.json()); 
+// Set up body parser to handle URL-encoded data
+app.use(bodyParser.urlencoded({ extended: true }));
+
+// Set up the path to the front-end directory
+app.use(express.static(path.join(__dirname, '..', 'front-end')));
+
+// Set up the path to the front-end pages
+app.use('/pages', express.static(path.join(__dirname, '..', 'front-end', 'pages')));
+
+// Set up the path to the front-end assets
+app.use('/assets', express.static(path.join(__dirname, '..', 'front-end', ' assets')));
+
+// Set up the path to the front-end styles    
+app.use('/styles', express.static(path.join(__dirname, '..', 'front-end', 'styles')));
+
+
+// Set up the path to the front-end scripts
+app.use('/scripts', express.static(path.join(__dirname, '..', 'front-end', 'scripts')));
+
+// Set up the path to the front-end images
+app.use('/images', express.static(path.join(__dirname, '..', 'front-end', 'images')));
+
+// Set up the path to the front-end fonts
+app.use('/fonts', express.static(path.join(__dirname, '..', 'front-end', 'fonts')));
 
 // Middleware
 app.use(bodyParser.urlencoded({ extended: true }));
