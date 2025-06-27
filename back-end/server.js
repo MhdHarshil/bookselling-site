@@ -44,6 +44,40 @@ app.use('/fonts', express.static(path.join(__dirname, '..', 'front-end', 'fonts'
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(express.static(path.join(__dirname, '..', 'front-end')));
 
+// Middleware to handle JSON requests
+app.use(express.json());
+// Middleware to handle URL-encoded requests
+app.use(express.urlencoded({ extended: true }));
+// Middleware to serve static files from the 'public' directory
+app.use(express.static('public'));
+// Middleware to log requests
+app.use((req, res, next) => {
+  console.log(`${req.method} ${req.url}`);
+  next();
+});
+
+
+// Middleware to handle CORS
+app.use((req, res, next) => {
+  res.header('Access-Control-Allow-Origin', '*');
+  res.header('Access-Control-Allow-Methods', 'GET, POST, PUT, DELETE, OPTIONS');
+  res.header('Access-Control-Allow-Headers', 'Content-Type, Authorization');
+  next();
+}
+);
+
+// Middleware to parse cookies
+const cookieParser = require('cookie-parser');
+
+app.use(cookieParser());
+
+// Middleware to handle 404 errors
+app.use((req, res) => {
+  res.status(404).json({ error: 'Not Found' });
+});
+
+
+
 // MongoDB Connection
 mongoose.connect(process.env.MONGO_URI, {
   useNewUrlParser: true,
