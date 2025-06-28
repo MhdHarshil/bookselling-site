@@ -22,5 +22,26 @@
 </p>
  </form>
   
+  <footer>
+    <p>&copy; 2023 Book Store</p>
+  </footer>
+  
+  <script src="../scripts/login-page.js">
+    // JavaScript code for login functionality can be added here
+    document.querySelector('form').addEventListener('submit', function(event) {
+      event.preventDefault(); // Prevent the default form submission
+      
+      const email = document.querySelector('input[name="email"]').value;
+      const password = document.querySelector('input[name="password"]').value;
+      
+      console.log('Login attempt with:', { email, password });
+      
+      // Simulate a successful login
+      alert('Login successful!');
+      
+      // Redirect to the home page or another page
+      window.location.href = '/index.html';
+    });
+  </script>
 </body>
 </html>
