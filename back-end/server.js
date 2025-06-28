@@ -115,6 +115,158 @@ app.post('/login', async (req, res) => {
     res.status(500).send('Something went wrong');
   }
 });
+app.get('/payment', (req, res) => {
+  res.sendFile(path.join(__dirname, '..', 'front-end', 'pages', 'payment.html'));
+});
+app.post('/process-payment', (req, res) => {
+  const { cardNumber, expiryDate, cvv } = req.body;
+
+  // Here you would typically process the payment with a payment gateway
+  console.log('Processing payment with:', {
+    cardNumber,
+    expiryDate,
+    cvv
+  });
+
+  // Simulate a successful payment
+  res.send('<h1>✅ Payment processed successfully!</h1>');
+});
+// Error handling middleware
+app.use((err, req, res, next) => {
+  console.error(err.stack);
+  res.status(500).send('Something broke!');
+});
+// Serve the payment page
+app.get('/payment', (req, res) => {
+  res.sendFile(path.join(__dirname, '..', 'front-end', 'pages', 'payment.html'));
+});
+// Handle payment processing
+app.post('/process-payment', (req, res) => {
+  const { cardNumber, expiryDate, cvv } = req.body;
+  // Here you would typically process the payment with a payment gateway
+  console.log('Processing payment with:', {
+    cardNumber,
+    expiryDate,
+    cvv
+  });
+
+  // Simulate a successful payment
+  res.send('<h1>✅ Payment processed successfully!</h1>');
+});
+// Serve the payment page
+app.get('/payment', (req, res) => {
+  res.sendFile(path.join(__dirname, '..', 'front-end', 'pages', 'payment.html'));
+});
+// Handle payment processing
+app.post('/process-payment', (req, res) => {
+  const { cardNumber, expiryDate, cvv } = req.body;
+
+  // Here you would typically process the payment with a payment gateway
+  console.log('Processing payment with:', {
+    cardNumber,
+    expiryDate,
+    cvv
+  });
+
+  // Simulate a successful payment
+  res.send('<h1>✅ Payment processed successfully!</h1>');
+}
+);
+// Serve the payment page
+app.get('/payment', (req, res) => {
+  res.sendFile(path.join(__dirname, '..', 'front-end', 'pages', 'payment.html'));
+});
+// Handle payment processing
+app.post('/process-payment', (req, res) => {
+  const { cardNumber, expiryDate, cvv } = req.body;
+
+  // Here you would typically process the payment with a payment gateway
+  console.log('Processing payment with:', {
+    cardNumber,
+    expiryDate,
+    cvv
+  });
+
+  // Simulate a successful payment
+  res.send('<h1>✅ Payment processed successfully!</h1>');
+}
+);
+// Serve the payment page
+app.get('/payment', (req, res) => {
+  res.sendFile(path.join(__dirname, '..', 'front-end', 'pages', 'payment.html'));
+});
+// Handle payment processing
+app.post('/process-payment', (req, res) => {
+  const { cardNumber, expiryDate, cvv } = req.body;
+
+  // Here you would typically process the payment with a payment gateway
+  console.log('Processing payment with:', {
+    cardNumber,
+    expiryDate,
+    cvv
+  });
+
+  // Simulate a successful payment
+  res.send('<h1>✅ Payment processed successfully!</h1>');
+}
+);
+// Serve the payment page
+app.get('/payment', (req, res) => {
+  res.sendFile(path.join(__dirname, '..', 'front-end', 'pages', 'payment.html'));
+});
+// Handle payment processing
+app.post('/process-payment', (req, res) => {
+  const { cardNumber, expiryDate, cvv } = req.body;
+
+  // Here you would typically process the payment with a payment gateway
+  console.log('Processing payment with:', {
+    cardNumber,
+    expiryDate,
+    cvv
+  });
+
+  // Simulate a successful payment
+  res.send('<h1>✅ Payment processed successfully!</h1>');
+}
+);
+// Serve the payment page
+app.get('/payment', (req, res) => {
+  res.sendFile(path.join(__dirname, '..', 'front-end', 'pages', 'payment.html'));
+});
+// Handle payment processing
+app.post('/process-payment', (req, res) => {
+  const { cardNumber, expiryDate, cvv } = req.body;
+
+  // Here you would typically process the payment with a payment gateway
+  console.log('Processing payment with:', {
+    cardNumber,
+    expiryDate,
+    cvv
+  });
+
+  // Simulate a successful payment
+  res.send('<h1>✅ Payment processed successfully!</h1>');
+}
+);
+// Serve the payment page
+app.get('/payment', (req, res) => {
+  res.sendFile(path.join(__dirname, '..', 'front-end', 'pages', 'payment.html'));
+});
+// Handle payment processing
+app.post('/process-payment', (req, res) => {
+  const { cardNumber, expiryDate, cvv } = req.body;
+
+  // Here you would typically process the payment with a payment gateway
+  console.log('Processing payment with:', {
+    cardNumber,
+    expiryDate,
+    cvv
+  });
+
+  // Simulate a successful payment
+  res.send('<h1>✅ Payment processed successfully!</h1>');
+}
+);
 
 // Start Server
 const PORT = process.env.PORT || 3000;
