@@ -15,6 +15,7 @@ Welcome to **BookBazaar**, a collaborative e-commerce web app for selling books.
 - Node.js
 - Express.js
 - MongoDB (with Mongoose)
+- SQL
 
 ### Tools:
 - Git & GitHub (for collaboration)
